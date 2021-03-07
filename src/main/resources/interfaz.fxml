@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<?import javafx.geometry.Insets?>
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controller.MainWindows"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainWindows">
 
     <children>
-        <MenuBar prefHeight="31.0" prefWidth="578.0">
+        <MenuBar prefHeight="31.0" prefWidth="600.0">
             <menus>
-                <Menu mnemonicParsing="false" text="File">
+                <Menu mnemonicParsing="false" text="Ajustes">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="Close" />
+                        <MenuItem id="temamenu" fx:id="temamenu" mnemonicParsing="false" text="tema oscuro" />
                     </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Help">
@@ -24,7 +22,7 @@
                 </Menu>
             </menus>
         </MenuBar>
-        <Pane layoutY="31.0" opacity="0.61" prefHeight="369.0" prefWidth="345.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="233.0" AnchorPane.topAnchor="31.0">
+        <Pane fx:id="paneBotones" layoutY="31.0" opacity="0.61" prefHeight="369.0" prefWidth="345.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="233.0" AnchorPane.topAnchor="31.0">
             <children>
                 <GridPane alignment="CENTER_LEFT" layoutX="23.0" layoutY="35.0" prefHeight="300.0" prefWidth="300.0">
                     <columnConstraints>
@@ -38,51 +36,15 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                     <children>
-                        <Button fx:id="btn00" alignment="CENTER" mnemonicParsing="false" onAction="#clickButton" prefHeight="100.0" prefWidth="103.0" text="Button">
-                            <opaqueInsets>
-                                <Insets />
-                            </opaqueInsets>
-                        </Button>
-                        <Button fx:id="btn01" alignment="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#clickButton" prefHeight="100.0" prefWidth="103.0" text="Button" GridPane.columnIndex="1">
-                            <opaqueInsets>
-                                <Insets />
-                            </opaqueInsets>
-                        </Button>
-                        <Button fx:id="btn02" alignment="CENTER" layoutX="110.0" layoutY="10.0" mnemonicParsing="false" onAction="#clickButton" prefHeight="100.0" prefWidth="103.0" text="Button" GridPane.columnIndex="2">
-                            <opaqueInsets>
-                                <Insets />
-                            </opaqueInsets>
-                        </Button>
-                        <Button fx:id="btn10" alignment="CENTER" layoutX="210.0" layoutY="10.0" mnemonicParsing="false" onAction="#clickButton" prefHeight="100.0" prefWidth="103.0" text="Button" GridPane.rowIndex="1">
-                            <opaqueInsets>
-                                <Insets />
-                            </opaqueInsets>
-                        </Button>
-                        <Button fx:id="btn11" alignment="CENTER" layoutX="10.0" layoutY="110.0" mnemonicParsing="false" onAction="#clickButton" prefHeight="100.0" prefWidth="103.0" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                            <opaqueInsets>
-                                <Insets />
-                            </opaqueInsets>
-                        </Button>
-                        <Button fx:id="btn12" alignment="CENTER" layoutX="110.0" layoutY="110.0" mnemonicParsing="false" onAction="#clickButton" prefHeight="100.0" prefWidth="103.0" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="1">
-                            <opaqueInsets>
-                                <Insets />
-                            </opaqueInsets>
-                        </Button>
-                        <Button fx:id="btn20" alignment="CENTER" layoutX="210.0" layoutY="110.0" mnemonicParsing="false" onAction="#clickButton" prefHeight="100.0" prefWidth="103.0" text="Button" GridPane.rowIndex="2">
-                            <opaqueInsets>
-                                <Insets />
-                            </opaqueInsets>
-                        </Button>
-                        <Button fx:id="btn21" alignment="CENTER" layoutX="10.0" layoutY="210.0" mnemonicParsing="false" onAction="#clickButton" prefHeight="100.0" prefWidth="103.0" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                            <opaqueInsets>
-                                <Insets />
-                            </opaqueInsets>
-                        </Button>
-                        <Button fx:id="btn22" alignment="CENTER" layoutX="110.0" layoutY="210.0" mnemonicParsing="false" onAction="#clickButton" prefHeight="100.0" prefWidth="103.0" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="2">
-                            <opaqueInsets>
-                                <Insets />
-                            </opaqueInsets>
-                        </Button>
+                        <Button id="b00" fx:id="b00" mnemonicParsing="false" onAction="#clickButton" prefHeight="100.0" prefWidth="103.0" />
+                        <Button id="b01" fx:id="b01" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#clickButton" prefHeight="100.0" prefWidth="103.0" GridPane.columnIndex="1" />
+                        <Button id="b02" fx:id="b02" layoutX="110.0" layoutY="10.0" mnemonicParsing="false" onAction="#clickButton" prefHeight="100.0" prefWidth="103.0" GridPane.columnIndex="2" />
+                        <Button id="b10" fx:id="b10" layoutX="210.0" layoutY="10.0" mnemonicParsing="false" onAction="#clickButton" prefHeight="100.0" prefWidth="103.0" GridPane.rowIndex="1" />
+                        <Button id="b11" fx:id="b11" layoutX="10.0" layoutY="110.0" mnemonicParsing="false" onAction="#clickButton" prefHeight="100.0" prefWidth="103.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Button id="b12" fx:id="b12" layoutX="110.0" layoutY="110.0" mnemonicParsing="false" onAction="#clickButton" prefHeight="100.0" prefWidth="103.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Button id="b20" fx:id="b20" layoutX="210.0" layoutY="110.0" mnemonicParsing="false" onAction="#clickButton" prefHeight="100.0" prefWidth="103.0" GridPane.rowIndex="2" />
+                        <Button id="b21" fx:id="b21" layoutX="10.0" layoutY="210.0" mnemonicParsing="false" onAction="#clickButton" prefHeight="100.0" prefWidth="103.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Button id="b22" fx:id="b22" layoutX="110.0" layoutY="210.0" mnemonicParsing="false" onAction="#clickButton" prefHeight="100.0" prefWidth="103.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                     </children>
                     <opaqueInsets>
                         <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
@@ -90,11 +52,20 @@
                 </GridPane>
             </children>
         </Pane>
-        <Pane layoutX="345.0" layoutY="31.0" opacity="0.56" prefHeight="369.0" prefWidth="233.0">
+        <Pane fx:id="paneMode" layoutX="367.0" layoutY="31.0" opacity="0.56" prefHeight="369.0" prefWidth="233.0" styleClass="background">
             <children>
-                <RadioButton fx:id="hvm" layoutX="39.0" layoutY="113.0" mnemonicParsing="false" text="Humano vs Robocop" />
-                <RadioButton fx:id="hvh" layoutX="39.0" layoutY="176.0" mnemonicParsing="false" text="Simio vs Simio" />
-                <RadioButton fx:id="mvm" layoutX="40.0" layoutY="239.0" mnemonicParsing="false" text="Terminator vs Robocop" />
+                <RadioButton fx:id="pvsp" layoutX="56.0" layoutY="53.0" mnemonicParsing="false" onAction="#modojuego" text="Player vs Player">
+               <toggleGroup>
+                  <ToggleGroup fx:id="grupo1" />
+               </toggleGroup></RadioButton>
+                <RadioButton fx:id="pvsc" layoutX="56.0" layoutY="93.0" mnemonicParsing="false" onAction="#modojuego" text="Player vs CPY" toggleGroup="$grupo1" />
+                <RadioButton fx:id="cvsc" layoutX="60.0" layoutY="132.0" mnemonicParsing="false" onAction="#modojuego" text="CPU vs CPU" toggleGroup="$grupo1" />
+                <Text fx:id="player1NameText" layoutX="14.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player 1" />
+                <TextField fx:id="player1Name" layoutX="14.0" layoutY="193.0" />
+                <Button fx:id="save" layoutX="178.0" layoutY="239.0" mnemonicParsing="false" onAction="#save" text="Save" />
+                <Text fx:id="player2NameText" layoutX="14.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player 2 " />
+                <TextField fx:id="player2Name" layoutX="14.0" layoutY="239.0" />
+                <Button fx:id="start" layoutX="60.0" layoutY="296.0" mnemonicParsing="false" onAction="#clickStart" prefHeight="31.0" prefWidth="114.0" text="Start" />
             </children>
         </Pane>
 

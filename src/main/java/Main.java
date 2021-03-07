@@ -1,4 +1,3 @@
-import controller.MainWindows;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -9,20 +8,19 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+
         FXMLLoader loader = new FXMLLoader(getClass().getResource("interfaz.fxml"));
         Parent root = loader.load();
+        primaryStage.setTitle("Tic Tac Toe");
 
         Scene scene = new Scene(root);
-
-//
-//        MainWindows mainWindows = loader.getController();
-//        mainWindows.setScene(scene);
-//        mainWindows.setStage(primaryStage);
-
+        scene.getStylesheets().add("Style.css");
         primaryStage.setScene(scene);
         primaryStage.show();
 
+    }
 
-
+    public static void main(String[] args) {
+        launch(args);
     }
 }
